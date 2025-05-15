@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\aggiuntalibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\aggiuntalibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\infolibroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\infolibroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\libriform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\libriform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\ricercalibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\ricercalibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|c:\\users\\khatooxd\\desktop\\booktrack\\booktrack\\forms\\storicoprestitiform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C578676-24C7-42D7-B7A3-5DF9CE723BF3}|BookTrack\\BookTrack.csproj|solutionrelative:booktrack\\forms\\storicoprestitiform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AggiuntaLibro.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\AggiuntaLibro.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\AggiuntaLibro.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\AggiuntaLibro.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\AggiuntaLibro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:32:45.232Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InfoLibroForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\InfoLibroForm.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\InfoLibroForm.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\InfoLibroForm.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\InfoLibroForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:32:25.214Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LibriForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\LibriForm.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\LibriForm.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\LibriForm.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\LibriForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:31:38.695Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\LoginForm.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:31:29.506Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\MenuForm.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\MenuForm.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\MenuForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:31:24.345Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\Register.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\Register.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\Register.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:31:13.628Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RicercaLibro.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\RicercaLibro.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\RicercaLibro.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\RicercaLibro.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\RicercaLibro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:31:02.753Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Settings.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\Settings.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\Settings.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\Settings.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\Settings.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:30:59.576Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StoricoPrestitiForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\StoricoPrestitiForm.cs",
+              "RelativeDocumentMoniker": "BookTrack\\Forms\\StoricoPrestitiForm.cs",
+              "ToolTip": "C:\\Users\\KhatooXD\\Desktop\\BookTrack\\BookTrack\\Forms\\StoricoPrestitiForm.cs [Design]",
+              "RelativeToolTip": "BookTrack\\Forms\\StoricoPrestitiForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:30:57.169Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

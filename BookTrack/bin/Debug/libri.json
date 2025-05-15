@@ -1,0 +1,56 @@
+[
+  {
+    "ID": 1006,
+    "Prezzo": 19.99,
+    "Titolo": "Harry Potter e la Pietra Filosofale",
+    "Autore": "J.K. Rowling",
+    "Genere": "Fantasy",
+    "Anno": 1997,
+    "Disponibile": true
+  },
+  {
+    "ID": 1007,
+    "Prezzo": 11.8,
+    "Titolo": "Orgoglio e pregiudizio",
+    "Autore": "Jane Austen",
+    "Genere": "Romantico",
+    "Anno": 1813,
+    "Disponibile": true
+  },
+  {
+    "ID": 1009,
+    "Prezzo": 10.5,
+    "Titolo": "Dracula",
+    "Autore": "Bram Stoker",
+    "Genere": "Horror",
+    "Anno": 1897,
+    "Disponibile": true
+  },
+  {
+    "ID": 1010,
+    "Prezzo": 13.3,
+    "Titolo": "Il grande Gatsby",
+    "Autore": "F. Scott Fitzgerald",
+    "Genere": "Classico",
+    "Anno": 1925,
+    "Disponibile": true
+  },
+  {
+    "ID": 2000,
+    "Prezzo": 23.0,
+    "Titolo": "Vivere Senigallia",
+    "Autore": "Andrea Battistini",
+    "Genere": "Romantico",
+    "Anno": 2023,
+    "Disponibile": true
+  },
+  {
+    "ID": 7767,
+    "Prezzo": 9.0,
+    "Titolo": "Fortnite",
+    "Autore": "CiccioGamer89",
+    "Genere": "Guida",
+    "Anno": 2018,
+    "Disponibile": true
+  }
+]
