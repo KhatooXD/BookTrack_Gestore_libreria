@@ -55,4 +55,5 @@ BookTrack/
   
   - Battistini Andrea : Gestore del codice e della sua struttura 
   - Tassi Tommaso : Gestore della grafica e dei nomi delle variabili
-    
+
+Link Presentazione: https://www.canva.com/design/DAGnoUbNvvM/O446OQ9Loo1VrR-XwqG7IA/edit?utm_content=DAGnoUbNvvM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
