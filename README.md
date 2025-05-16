@@ -31,48 +31,13 @@ permette anche la cronologia dei prestiti, e  infine permette a chi è admin la 
 - Struttura del progretto:
 BookTrack/
 
-├── Classi/
-│   ├── Cliente.cs
+ Classi: Cliente,Libro,Prestito
 
-│   ├── Libro.cs
+ Forms: LoginForm,Register,MenuForm,LibriForm,AggiuntaLibro,InfoLibroForm,StoricoPrestitiForm,RicercaLibro
 
-│   └── Prestito.cs
+ Classi di gestione: GestoreUtenti,GestoreLibri,GestorePrestiti,Validazione
 
-├── Forms/
-
-│   ├── LoginForm.cs
-
-│   ├── Register.cs
-
-│   ├── MenuForm.cs
-
-│   ├── LibriForm.cs
-
-│   ├── AggiuntaLibro.cs
-
-│   ├── InfoLibroForm.cs
-
-│   ├── StoricoPrestitiForm.cs
-
-│   └── RicercaLibro.cs
-
-├── Management_Class/
-
-│   ├── GestoreUtenti.cs
-
-│   ├── GestoreLibri.cs
-
-│   ├── GestorePrestiti.cs
-
-│   └── Validator.cs
-
-├── utenti.json
-
-├── libri.json
-
-└── prestiti.json
-
-
+ File JSON (simulatore di un database): utenti,libri,prestiti
 
 
 - Requisiti:
