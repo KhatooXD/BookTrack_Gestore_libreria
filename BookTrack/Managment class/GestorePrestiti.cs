@@ -8,10 +8,14 @@ namespace BookTrack.Management_Class
 {
     public static class GestorePrestiti
     {
+        #region percorso file JSON
         private static string filePath = "prestiti.json";
+        #endregion
 
+        #region metodo per caricare i prestiti
         public static List<Prestito> CaricaPrestiti()
         {
+            //se il file non esiste, restituisce lista vuota
             if (!File.Exists(filePath))
             {
                 return new List<Prestito>();
@@ -19,13 +23,16 @@ namespace BookTrack.Management_Class
 
             string json = File.ReadAllText(filePath);
 
+            //se il contenuto è vuoto, restituisce lista vuota
             if (string.IsNullOrWhiteSpace(json))
             {
                 return new List<Prestito>();
             }
 
+            //prova a deserializzare il contenuto JSON
             List<Prestito> lista = JsonConvert.DeserializeObject<List<Prestito>>(json);
 
+            //se la deserializzazione fallisce, restituisce lista vuota
             if (lista == null)
             {
                 return new List<Prestito>();
@@ -33,20 +40,29 @@ namespace BookTrack.Management_Class
 
             return lista;
         }
+        #endregion
 
+        #region metodo per salvare i prestiti
         public static void SalvaPrestiti(List<Prestito> prestiti)
         {
+            //serializza la lista in formato JSON e la salva nel file
             string json = JsonConvert.SerializeObject(prestiti, Formatting.Indented);
             File.WriteAllText(filePath, json);
         }
+        #endregion
 
+        #region metodo per aggiungere un prestito
         public static void AggiungiPrestito(Prestito nuovoPrestito)
         {
             List<Prestito> prestiti = CaricaPrestiti();
+            //aggiunge il nuovo prestito alla lista
             prestiti.Add(nuovoPrestito);
-            SalvaPrestiti(prestiti);
+            //salva la lista aggiornata
+            SalvaPrestiti(prestiti); 
         }
+        #endregion
 
+        #region metodo per generare un ID univoco
         public static int GeneraIDPrestito()
         {
             List<Prestito> prestiti = CaricaPrestiti();
@@ -54,6 +70,7 @@ namespace BookTrack.Management_Class
             int id;
             bool esiste;
 
+            //genera un ID finché non è univoco
             do
             {
                 id = random.Next(1000, 9999);
@@ -71,5 +88,6 @@ namespace BookTrack.Management_Class
 
             return id;
         }
+        #endregion
     }
 }

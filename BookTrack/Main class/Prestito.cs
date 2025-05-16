@@ -9,12 +9,15 @@ namespace BookTrack.Classi
 {
     public class Prestito
     {
+        #region dichiarazione variabili private
         private int _id;
         private int _idLibro;
         private int _idCliente;
         private DateTime _dataInizio;
         private DateTime _dataFine;
+        #endregion
 
+        #region metodo get e set della variabile di tipo intero ID
         public int ID
         {
             get
@@ -23,6 +26,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è maggiore di 0 restituisce il valore dell'utente
                 if (value > 0)
                 {
                     _id = value;
@@ -33,6 +37,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
+
+        #region metodo get e set della variabile di tipo intero IDLibro
         public int IDLibro
         {
             get
@@ -41,6 +48,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è maggiore di 0 restituisce il valore dell'utente
                 if (value > 0)
                 {
                     _idLibro = value;
@@ -51,14 +59,19 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
+
+        #region metodo get e set della variabile di tipo intero IDCliente
         public int IDCliente
         {
             get
             {
                 return _idCliente;
             }
+
             set
             {
+                //se il valore è maggiore di 0 restituisce il valore dell'utente
                 if (value > 0)
                 {
                     _idCliente = value;
@@ -69,7 +82,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo DateTime della data di inizio
         public DateTime DataInizio
         {
             get
@@ -78,6 +93,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è maggiore del valore minimo del datetime procede
                 if (value > DateTime.MinValue)
                 {
                     _dataInizio = value;
@@ -88,7 +104,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo DateTime della data di fine
         public DateTime DataFine
         {
             get
@@ -97,6 +115,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è maggiore del valore minimo del datetime procede
                 if (value > DateTime.MinValue)
                 {
                     _dataFine = value;
@@ -107,7 +126,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region Costruttore della classe Prestito
         public Prestito(int id, int idLibro, int idCliente, DateTime dataInizio, DateTime dataFine)
         {
             ID = id;
@@ -116,5 +137,6 @@ namespace BookTrack.Classi
             DataInizio = dataInizio;
             DataFine = dataFine;
         }
+        #endregion
     }
 }

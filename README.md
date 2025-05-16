@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 BookTrack è un applicazione che permette di gestire una libreria virtuale.
 
 L'utente ha la possibilità di prendere in prestito un libro disponibile nella libreria e tenerlo con se per un massimo di un mese
@@ -22,3 +23,7 @@ Assegnazione, restituzione e monitoraggio dei prestiti attivi e scaduti.
 Ricerca Libro:
 
 Tramite nome possiamo individuare le informazioni del libro, senza cercare direttamente nella libreria
+=======
+# BookTrack
+un semplice gestore di libreria in pc locale
+>>>>>>> a0a55321c8f2b6be403a8ce045d1e96c1cdf3f20

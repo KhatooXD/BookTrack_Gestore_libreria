@@ -9,6 +9,7 @@ namespace BookTrack.Classi
 {
     public class Libro
     {
+        #region dichiarazione variabili private
         private int _id;
         private string _titolo;
         private string _autore;
@@ -16,7 +17,9 @@ namespace BookTrack.Classi
         private int _anno;
         private bool _diponibile;
         private double _prezzo;
+        #endregion
 
+        #region metodo get e set della variabile di tipo intero ID
         public int ID
         {
             get
@@ -25,6 +28,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è maggiore di 0 procede
                 if (value > 0)
                 {
                     _id = value;
@@ -35,7 +39,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo double prezzo
         public double Prezzo
         {
             get
@@ -44,6 +50,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è maggiore di 0 continua
                 if (value > 0)
                 {
                     _prezzo = value;
@@ -54,6 +61,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
+
+        #region metodo get e set della variabile di tipo stringa titolo
         public string Titolo
         {
             get
@@ -62,6 +72,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è diverso da nullo continua
                 if (!string.IsNullOrEmpty(value))
                 {
                     _titolo = value;
@@ -72,6 +83,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
+
+        #region metodo get e set della variabile di tipo stringa autore
         public string Autore
         {
             get
@@ -80,6 +94,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se il valore è diverso da nullo continua
                 if (!string.IsNullOrEmpty(value))
                 {
                     _autore = value;
@@ -90,6 +105,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
+
+        #region metodo get e set della variabile di tipo stringa genere
         public string Genere
         {
             get
@@ -108,6 +126,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
+
+        #region metodo get e set della variabile di tipo intero anno
         public int Anno
         {
             get
@@ -126,7 +147,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo bool disponibile
         public bool Disponibile
         {
             get
@@ -138,6 +161,9 @@ namespace BookTrack.Classi
                 _diponibile = value;
             }
         }
+        #endregion
+
+        #region costruttore della classe Libro
 
         public Libro(int id, string titolo, string autore, string genere, int anno, bool disponibile, double prezzo)
         {
@@ -149,5 +175,6 @@ namespace BookTrack.Classi
             Disponibile = disponibile;
             Prezzo = prezzo;
         }
+        #endregion
     }
 }

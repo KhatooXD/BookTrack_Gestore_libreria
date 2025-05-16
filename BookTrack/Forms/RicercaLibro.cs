@@ -8,6 +8,7 @@ namespace BookTrack.Forms
 {
     public partial class RicercaLibro : Form
     {
+        #region  dichiarazione variabili private
         private List<Libro> libri;
         private Cliente cliente;
 
@@ -19,44 +20,54 @@ namespace BookTrack.Forms
         private Label lblDisponibile;
         private Label lblPrezzo;
         private Button btnVaiLibreria;
+        #endregion
 
+        #region costruttore della form
         public RicercaLibro(List<Libro> listaLibri, Cliente clienteUtente)
         {
             InitializeComponent();
 
             if (listaLibri != null)
             {
-                libri = listaLibri;
+                //assegna la lista dei libri se non è nulla
+                libri = listaLibri; 
             }
             else
             {
-                libri = new List<Libro>();
+                //altrimenti crea una lista vuota
+                libri = new List<Libro>(); 
             }
 
             cliente = clienteUtente;
 
-            CreaControlli();
+            CreaControlli(); 
 
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
         }
+        #endregion
 
+        #region metodo per creare tutti i controlli della form
         private void CreaControlli()
         {
-            cmbLibri = new ComboBox();
-            cmbLibri.Location = new Point(20, 20);
-            cmbLibri.Width = 340;
+            cmbLibri = new ComboBox(); //creo una nuova combobox chiamata cmbLibri
+            cmbLibri.Location = new Point(20, 20); //indico dove è situata la combobox nella form
+            cmbLibri.Width = 340; //larghezza della combobox
             cmbLibri.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            //foreach per aggiungere i titoli dei libri alla comboBox
             foreach (Libro libro in libri)
             {
-                cmbLibri.Items.Add(libro.Titolo);
+                
+                cmbLibri.Items.Add(libro.Titolo); 
             }
 
             if (cmbLibri.Items.Count > 0)
             {
-                cmbLibri.SelectedIndex = 0;
+                //se ci sono elementi, seleziona il primo
+                cmbLibri.SelectedIndex = 0; 
             }
+
             //collega l'evento di cambio selezione della ComboBox al metodo CmbLibri_SelectedIndexChange
             cmbLibri.SelectedIndexChanged += CmbLibri_SelectedIndexChanged;
             Controls.Add(cmbLibri);
@@ -79,31 +90,38 @@ namespace BookTrack.Forms
 
             if (cmbLibri.Items.Count > 0)
             {
-                Aggiorna(0);
+                Aggiorna(0); //aggiorna le info del primo libro
             }
             else
             {
                 lblTitolo.Text = "(Nessun libro disponibile)";
             }
         }
+        #endregion
 
+        #region metodo per creare in modo dinamico le label
         private Label CreaLabel(string testo, int posY)
         {
-            Label lbl = new Label();
-            lbl.Text = testo;
-            lbl.Location = new Point(20, posY);
-            lbl.AutoSize = true;
-            Controls.Add(lbl);
-            return lbl;
+            Label lblDinamica = new Label(); //creo una nuova label
+            lblDinamica.Text = testo;
+            lblDinamica.Location = new Point(20, posY); 
+            lblDinamica.AutoSize = true; 
+            Controls.Add(lblDinamica); //aggiungo i controlli alla label
+            return lblDinamica; 
         }
+        #endregion
 
+        #region metodo per cambio selezione ComboBox
         private void CmbLibri_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Aggiorna(cmbLibri.SelectedIndex);
+            Aggiorna(cmbLibri.SelectedIndex); //aggiorna le info del libro selezionato
         }
+        #endregion
 
+        #region metodo per aggiornare le info dei libri selezionati
         private void Aggiorna(int index)
         {
+            
             if (index < 0 || index >= libri.Count)
             {
                 return;
@@ -119,12 +137,15 @@ namespace BookTrack.Forms
             lblDisponibile.Text = "Disponibile: " + (libro.Disponibile ? "Sì" : "No");
             lblPrezzo.Text = "Prezzo: " + libro.Prezzo.ToString("0.00") + " €";
         }
+        #endregion
 
+        #region bottone per andare direttamente alla listview della libreria
         private void BtnVaiLibreria_Click(object sender, EventArgs e)
         {
-            this.Close();
-            LibriForm formLibri = new LibriForm(cliente);
+            this.Close(); //chiude la form della RicercaLibro
+            LibriForm formLibri = new LibriForm(cliente); //apre la form principale dei libri
             formLibri.Show();
         }
+        #endregion
     }
 }

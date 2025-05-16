@@ -10,10 +10,13 @@ namespace BookTrack.Forms
 {
     public partial class MenuForm : Form
     {
+        #region dichiarazione variabili private
         private Cliente cliente;
         private ComboBox cmbTitoliRimozione;
         private Form Rimuovi;
+        #endregion
 
+        #region costruttore della form
         public MenuForm(Cliente utente)
         {
             InitializeComponent();
@@ -23,7 +26,9 @@ namespace BookTrack.Forms
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
         }
+        #endregion
 
+        #region metodo per loaddare la form
         private void MenuForm_Load(object sender, EventArgs e)
         {
             btnRimuovi.Visible = false;
@@ -35,7 +40,8 @@ namespace BookTrack.Forms
                 btnRimuovi.Visible = true;
                 lblAdmin.Visible = true;
             }
-            // Nasconde tutte le altre form aperte tranne quella corrente
+
+            //nasconde tutte le altre form aperte tranne quella corrente
             foreach (Form formAperta in Application.OpenForms)
             {
                 if (formAperta != this)
@@ -44,32 +50,40 @@ namespace BookTrack.Forms
                 }
             }
         }
+        #endregion
 
+        #region metodo per gestire la chiusura form
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //messaggio di conferma per l'utente
             DialogResult risultato = MessageBox.Show("Uscire?", "Conferma", MessageBoxButtons.YesNo);
             if (risultato == DialogResult.Yes)
             {
                 LoginForm login = new LoginForm();
-                login.Show();
+                login.Show(); //riapre la form di login
             }
             else
             {
-                e.Cancel = true;
+                e.Cancel = true; //annulla la chiusura della form
             }
         }
+        #endregion
 
+        #region bottone per visualizzare i libri disponibili (apre la listview della libreria)
         private void btnVisualizzaLibriDisponibili_Click(object sender, EventArgs e)
         {
             LibriForm libriForm = new LibriForm(cliente);
-            libriForm.Show();
+            libriForm.Show(); //mostra la form dei libri
         }
+        #endregion
 
+        #region bottone per aprire lo storico dei libri dell'utente
         private void btnStoricoPrestiti_Click(object sender, EventArgs e)
         {
             List<Prestito> tuttiIPrestiti = GestorePrestiti.CaricaPrestiti();
             bool verificaPrestiti = false;
 
+            //verifica se il cliente ha almeno un prestito
             foreach (Prestito prestito in tuttiIPrestiti)
             {
                 if (prestito.IDCliente == cliente.ID)
@@ -78,6 +92,7 @@ namespace BookTrack.Forms
                     break;
                 }
             }
+
             if (!verificaPrestiti)
             {
                 MessageBox.Show("Nessun prestito.");
@@ -85,9 +100,11 @@ namespace BookTrack.Forms
             }
 
             StoricoPrestitiForm storicoForm = new StoricoPrestitiForm(cliente);
-            storicoForm.ShowDialog();
+            storicoForm.ShowDialog(); //mostra la finestra dello storico
         }
+        #endregion
 
+        #region bottone per rimuovere un libro (solo l'admin può farlo)
         private void btnRimuovi_Click(object sender, EventArgs e)
         {
             List<Libro> tuttiILibri = GestoreLibri.CaricaLibri();
@@ -98,24 +115,26 @@ namespace BookTrack.Forms
                 return;
             }
 
-            Rimuovi = new Form();
-            Rimuovi.Text = "Rimuovi Libro";
-            Rimuovi.Size = new Size(400, 180);
-            Rimuovi.StartPosition = FormStartPosition.CenterParent;
+            //creazione della form per la rimozione
+            Rimuovi = new Form(); 
+            Rimuovi.Text = "Rimuovi Libro"; //testo della form
+            Rimuovi.Size = new Size(400, 180); //grandezze della form
+            Rimuovi.StartPosition = FormStartPosition.CenterParent; //posizione della form all'apertura
             Rimuovi.FormBorderStyle = FormBorderStyle.FixedDialog;
-            Rimuovi.MaximizeBox = false;
-            Rimuovi.MinimizeBox = false;
+            Rimuovi.MaximizeBox = false; //non si può aumentare la grandezza della form
+            Rimuovi.MinimizeBox = false; //non si può diminuire la grandezza della form
 
-            Label lblTitolo = new Label();
+            Label lblTitolo = new Label(); //creazione della label lbltitolo
             lblTitolo.Text = "Nome libro:";
             lblTitolo.Location = new Point(20, 20);
             lblTitolo.AutoSize = true;
 
-            cmbTitoliRimozione = new ComboBox();
+            cmbTitoliRimozione = new ComboBox(); //creazione della combobox cmbTitoliRimozione
             cmbTitoliRimozione.Location = new Point(120, 18);
             cmbTitoliRimozione.Width = 240;
             cmbTitoliRimozione.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            
             foreach (Libro libro in tuttiILibri)
             {
                 cmbTitoliRimozione.Items.Add(libro.Titolo);
@@ -126,33 +145,38 @@ namespace BookTrack.Forms
                 cmbTitoliRimozione.SelectedIndex = 0;
             }
 
-            Button btnElimina = new Button();
+            Button btnElimina = new Button(); //creazione bottone btnElimina
             btnElimina.Text = "Elimina";
             btnElimina.Location = new Point(120, 60);
             btnElimina.Width = 100;
             //associa il click del pulsante Elimina al metodo btnElimina_Click
             btnElimina.Click += btnElimina_Click;
-            //aggiunge alla form Rimuovi i controlli: etichetta, combobox e pulsante
+
+            //aggiunge alla form i controlli
             Rimuovi.Controls.Add(lblTitolo);
             Rimuovi.Controls.Add(cmbTitoliRimozione);
             Rimuovi.Controls.Add(btnElimina);
-            //mostra la finestra di dialogo per la rimozione del libro
-            Rimuovi.ShowDialog();
+            Rimuovi.ShowDialog(); //mostra la finestra di dialogo
         }
+        #endregion
 
+        #region botone per eliminare il libro selezionato evento
         private void btnElimina_Click(object sender, EventArgs e)
         {
-            string titoloSelezionato = cmbTitoliRimozione.SelectedItem as string;
+            //ottiene il titolo selezionato nella ComboBox
+            object selezione = cmbTitoliRimozione.SelectedItem;
 
-            if (string.IsNullOrEmpty(titoloSelezionato))
+            //se la selezione è nulla ritorna con il messaggio "seleziona un libro"
+            if (selezione == null || string.IsNullOrWhiteSpace(selezione.ToString()))
             {
                 MessageBox.Show("Seleziona un libro.");
                 return;
             }
 
-            //mostra una finestra di conferma chiedendo se eliminare il libro selezionato
-            DialogResult conferma = MessageBox.Show("Vuoi eliminare \"" + titoloSelezionato + "\"?", "Conferma", MessageBoxButtons.YesNo);
+            string titoloSelezionato = selezione.ToString();
 
+            //mostra una finestra di conferma all'utente
+            DialogResult conferma = MessageBox.Show("Vuoi eliminare \"" + titoloSelezionato + "\"?", "Conferma", MessageBoxButtons.YesNo);
 
             if (conferma != DialogResult.Yes)
             {
@@ -162,6 +186,7 @@ namespace BookTrack.Forms
             List<Libro> tuttiILibri = GestoreLibri.CaricaLibri();
             Libro libroDaRimuovere = null;
 
+            //cerca il libro da rimuovere
             foreach (Libro libro in tuttiILibri)
             {
                 if (libro.Titolo == titoloSelezionato)
@@ -173,18 +198,21 @@ namespace BookTrack.Forms
 
             if (libroDaRimuovere != null)
             {
-                tuttiILibri.Remove(libroDaRimuovere);
-                GestoreLibri.SalvaLibri(tuttiILibri);
+                tuttiILibri.Remove(libroDaRimuovere); //rimuove il libro dalla lista
+                GestoreLibri.SalvaLibri(tuttiILibri); //salva la nuova lista aggiornata
                 MessageBox.Show("Libro \"" + titoloSelezionato + "\" rimosso.");
                 Rimuovi.Close();
             }
         }
+        #endregion
 
+        #region bottone per la ricerca del libro tramite nome
         private void btnRicerca_Click(object sender, EventArgs e)
         {
             List<Libro> tuttiILibri = GestoreLibri.CaricaLibri();
             List<Libro> libriDisponibili = new List<Libro>();
 
+            //mette solo i libri disponibili
             foreach (Libro libro in tuttiILibri)
             {
                 if (libro.Disponibile)
@@ -200,7 +228,8 @@ namespace BookTrack.Forms
             }
 
             RicercaLibro ricerca = new RicercaLibro(libriDisponibili, cliente);
-            ricerca.ShowDialog();
+            ricerca.ShowDialog(); //mostra la finestra di ricerca
         }
+        #endregion
     }
 }

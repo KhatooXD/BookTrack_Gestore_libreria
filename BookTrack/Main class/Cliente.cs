@@ -5,13 +5,16 @@ namespace BookTrack.Classi
 {
     public class Cliente
     {
+        #region dichiarazione variabile privata
         private int _id;
         private string _nome;
         private string _cognome;
         private string _email;
         private string _password;
         private string _telefono;
+        #endregion
 
+        #region metodo get e set della variabile di tipo intero ID
         public int ID
         {
             get
@@ -21,12 +24,18 @@ namespace BookTrack.Classi
             set
             {
                 if (value > 0)
+                {
                     _id = value;
+                }       
                 else
+                {
                     throw new Exception("ID non valido");
+                }     
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo stringa nome
         public string Nome
         {
             get
@@ -45,7 +54,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo stringa cognome
         public string Cognome
         {
             get
@@ -55,6 +66,7 @@ namespace BookTrack.Classi
             }
             set
             {
+                //se la stringa non è nulla e la lunghezza del valore è maggiore o uguale a 2
                 if (!string.IsNullOrEmpty(value) && value.Length >= 2)
                 {
                     _cognome = value;
@@ -65,7 +77,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo stringa email
         public string Email
         {
             get
@@ -84,7 +98,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo stringa password
         public string Password
         {
             get
@@ -103,7 +119,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region metodo get e set della variabile di tipo stringa telefono
         public string Telefono
         {
             get
@@ -123,7 +141,9 @@ namespace BookTrack.Classi
                 }
             }
         }
+        #endregion
 
+        #region costruttore della classe cliente
         public Cliente(int id, string nome, string cognome, string email, string telefono, string password)
         {
             ID = id;
@@ -133,8 +153,6 @@ namespace BookTrack.Classi
             Telefono = telefono;
             Password = password;
         }
-
-        
-
+        #endregion
     }
 }

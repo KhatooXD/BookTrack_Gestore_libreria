@@ -8,10 +8,13 @@ namespace BookTrack.Forms
 {
     public partial class LibriForm : Form
     {
+        #region dichiarazione variabili private
         private Cliente cliente;
         private AggiuntaLibro Aggiunta;
         private InfoLibroForm InfoLibro;
+        #endregion
 
+        #region costruttore della form
         public LibriForm(Cliente utente)
         {
             InitializeComponent();
@@ -21,28 +24,33 @@ namespace BookTrack.Forms
 
             //collega l'azione di cambio selezione della ListView al metodo lvListaLibri_SelectedIndexChanged
             this.lvListaLibri.SelectedIndexChanged += lvListaLibri_SelectedIndexChanged;
-
         }
+        #endregion
 
+        #region metodo per loaddare la LibriForm
         private void LibriForm_Load(object sender, EventArgs e)
         {
             if (cliente.Email == "BTAdmin@gmail.com")
             {
-                btnAggiungiLibroLista.Visible = true;
+                btnAggiungiLibroLista.Visible = true; //mostra il bottone solo se è admin
             }
             else
             {
                 btnAggiungiLibroLista.Visible = false;
             }
 
-            CaricaLibriInListView();
+            CaricaLibriInListView(); //carica tutti i libri nella ListView
         }
+        #endregion
 
+        #region metodo per caricare i libri nella ListView
         private void CaricaLibriInListView()
         {
+            //svuota la lista prima del caricamento
             lvListaLibri.Items.Clear();
 
-            List<Libro> libri = GestoreLibri.CaricaLibri();
+            //carica i libri dal file
+            List<Libro> libri = GestoreLibri.CaricaLibri(); 
 
             foreach (Libro libro in libri)
             {
@@ -52,11 +60,13 @@ namespace BookTrack.Forms
                 item.SubItems.Add(libro.Anno.ToString());
                 item.SubItems.Add(libro.Disponibile ? "Sì" : "No");
                 item.SubItems.Add(libro.Prezzo.ToString("0.00") + " €");
-                item.Tag = libro;
+                item.Tag = libro; //salva l'oggetto libro nel tag dell'item
                 lvListaLibri.Items.Add(item);
             }
         }
+        #endregion
 
+        #region bottone Aggiungi Libro
         private void btnAggiungiLibroLista_Click(object sender, EventArgs e)
         {
             //se la form Aggiunta non esiste oppure è stata chiusa, la crea e la mostra
@@ -69,47 +79,54 @@ namespace BookTrack.Forms
             }
             else
             {
-                Aggiunta.Focus();
+                Aggiunta.Focus(); //porta in primo piano la finestra se già aperta
             }
         }
+        #endregion
 
+        #region metodo per gestire la chiusura della form AggiuntaLibro
         private void AggiuntaLibroForm_Chiusa(object sender, FormClosedEventArgs e)
         {
             if (Aggiunta.LibroInserito)
             {
-                CaricaLibriInListView();
+                CaricaLibriInListView(); //aggiorna la lista se è stato inserito un nuovo libro
             }
             Aggiunta = null;
         }
+        #endregion
 
+        #region metodo per gestire selezione libro nella ListView
         private void lvListaLibri_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lvListaLibri.SelectedItems.Count == 0)
             {
-                return;
+                return; 
             }
-              
+
             ListViewItem selezionato = lvListaLibri.SelectedItems[0];
             Libro libro = (Libro)selezionato.Tag;
 
+            //se la form non esiste o è stata chiusa, la crea e la mostra
             if (InfoLibro == null || InfoLibro.IsDisposed)
             {
                 InfoLibro = new InfoLibroForm(libro, cliente);
                 //associa la chiusura della form dell'informazione del libro al metodo InfoLibroForm_Chiusa
                 InfoLibro.FormClosed += InfoLibroForm_Chiusa;
-                //mostra la form dell'info libro
                 InfoLibro.Show();
             }
             else
             {
-                InfoLibro.Focus();
+                InfoLibro.Focus(); //porta in primo piano la finestra se già aperta
             }
         }
+        #endregion
 
+        #region metodo per gestire la chiusura  della form di InfoLibro 
         private void InfoLibroForm_Chiusa(object sender, FormClosedEventArgs e)
         {
             InfoLibro = null;
-            CaricaLibriInListView();
+            CaricaLibriInListView(); 
         }
+        #endregion
     }
 }
