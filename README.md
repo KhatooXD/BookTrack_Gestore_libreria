@@ -31,39 +31,63 @@ permette anche la cronologia dei prestiti, e  infine permette a chi è admin la 
 - Struttura del progretto:
 BookTrack/
 ├── Classi/
+
 │   ├── Cliente.cs
+
 │   ├── Libro.cs
+
 │   └── Prestito.cs
+
 ├── Forms/
+
 │   ├── LoginForm.cs
+
 │   ├── Register.cs
+
 │   ├── MenuForm.cs
+
 │   ├── LibriForm.cs
+
 │   ├── AggiuntaLibro.cs
+
 │   ├── InfoLibroForm.cs
+
 │   ├── StoricoPrestitiForm.cs
+
 │   └── RicercaLibro.cs
+
 ├── Management_Class/
+
 │   ├── GestoreUtenti.cs
+
 │   ├── GestoreLibri.cs
+
 │   ├── GestorePrestiti.cs
+
 │   └── Validator.cs
+
 ├── utenti.json
+
 ├── libri.json
+
 └── prestiti.json
 
 
 
+
 - Requisiti:
+  
   - Visual studio 2017 (oppure superiore) installato nel pc
   - Windows 10
 
 - Credenziali Admin:
+  
   - Email: BTAdmin@gmail.com
   - Password: Pecorelle73! 
 
 
 - Relatori del progetto
+  
   - Battistini Andrea : Gestore del codice e della sua struttura 
   - Tassi Tommaso : Gestore della grafica e dei nomi delle variabili
     
