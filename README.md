@@ -30,8 +30,8 @@ permette anche la cronologia dei prestiti, e  infine permette a chi è admin la 
 
 - Struttura del progretto:
 BookTrack/
-├── Classi/
 
+├── Classi/
 │   ├── Cliente.cs
 
 │   ├── Libro.cs
